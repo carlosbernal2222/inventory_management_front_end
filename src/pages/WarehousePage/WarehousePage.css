@@ -1,0 +1,152 @@
+/* Container for the entire page */
+.warehouse-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.warehouse-page h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.create-button {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #218838;
+}
+
+
+.warehouse-page > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.warehouse-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.warehouse-container:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Warehouse details */
+.warehouse-details-container h2,
+.warehouse-details-container p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Buttons container */
+.warehouse-button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+/* Buttons styling */
+.delete-button,
+.update-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Bootstrap danger red */
+    color: white;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.update-button {
+    background-color: #ffc107; /* Bootstrap warning yellow */
+    color: black;
+    border: none;
+}
+
+.update-button:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .warehouse-container {
+        width: calc(50% - 20px); /* Two tiles per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .warehouse-container {
+        width: 100%; /* One tile per row on small screens */
+    }
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

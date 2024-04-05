@@ -1,0 +1,125 @@
+/* Container for the entire page */
+.product-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Styling for the product page header */
+.product-page h1 {
+    color: #333;
+    margin-bottom: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.create-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    width: 150px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.create-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Styling for the products table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f7f7f7;
+    font-size: 16px;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+/* Buttons styling */
+.delete-button,
+.update-button {
+    width: 80px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+    border: none;
+    outline: none;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.update-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+.update-button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+/* Modal styles  */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+}
+
+.close-button {
+
+}

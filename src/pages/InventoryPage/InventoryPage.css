@@ -1,0 +1,128 @@
+.inventory-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inventory-page h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* Inherits styles from .product-page for consistency */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.inventory-table th,
+.inventory-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+.inventory-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.inventory-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.inventory-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Reuses button styles from .product-page for a consistent look */
+.action-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+    border: none;
+    outline: none;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+}
+
+.update-button {
+    background-color: #ffc107;
+    width: 100px;
+    color: black;
+}
+
+.update-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    width: 100px;
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Additional styling for a more modern look */
+.inventory-table {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.inventory-table tr:first-child th:first-child {
+    border-top-left-radius: 4px;
+}
+
+.inventory-table tr:first-child th:last-child {
+    border-top-right-radius: 4px;
+}
+
+/* Styling for refrigerated column for visual cue */
+.refrigerated-yes {
+    color: #28a745; /* Green for Yes */
+}
+
+.refrigerated-no {
+    color: #dc3545; /* Red for No */
+}
+
+@media (max-width: 768px) {
+    .inventory-page {
+        padding: 10px; /* Reduce padding */
+    }
+    .action-button {
+        padding: 6px 12px; /* Smaller buttons */
+        font-size: 12px; /* Smaller text on buttons */
+    }
+    .inventory-table th, .inventory-table td {
+        padding: 8px; /* Less padding in table cells */
+    }
+}
+
+@media (max-width: 480px) {
+    .inventory-page {
+        flex-direction: column; /* Ensure everything stacks vertically */
+    }
+    .inventory-table, .inventory-table th, .inventory-table td {
+        font-size: 12px; /* Smaller font size for table text */
+    }
+    .action-button {
+        margin: 5px 0; /* Adjust margins for vertical stacking */
+        padding: 4px 8px; /* Even smaller buttons */
+        font-size: 11px; /* Smaller text on buttons */
+    }
+}

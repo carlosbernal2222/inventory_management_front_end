@@ -1,0 +1,71 @@
+:root {
+    --primary-color: #003366; /* Dark Blue */
+    --secondary-color: #336699; /* Steel Blue */
+    --accent-color: #407f7f; /* Muted Teal */
+    --background-color: #f4f7f7; /* Whisper Grey */
+    --text-color: #283845; /* Charcoal Blue */
+}
+
+.hero {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 2rem auto;
+}
+
+.features-list li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.hero-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
